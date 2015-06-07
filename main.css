@@ -43,7 +43,7 @@ body {
     /* color: #5E5E5E; */
 }  
 .navbar-default .navbar-brand img {
-   padding-top:1px;
+   padding-top:5px;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
@@ -88,7 +88,7 @@ body {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
+    background-color: #FFFFCC;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #FFCC66;

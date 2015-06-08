@@ -6,7 +6,7 @@ html {
 body {
 	padding-top: 70px;
     /* margin bottom by sticky footer height */
-    margin-bottom:195px;
+    margin-bottom:150px;
 }
 
 .footer {
@@ -17,7 +17,6 @@ body {
     display: flex;
     text-align: center;
     align-items: center;
-    margin-top: 60px;
 }
 
 .footer > .container > p:first-child {
@@ -27,7 +26,6 @@ body {
 .container {
     width: 85%;
 }
-
 
 /* navigation bar */
 .navbar-default {
@@ -107,6 +105,9 @@ body {
     }
     .tootip {
         display: none !important;
+    }
+    body {
+        margin-bottom: 250px;
     }
 }
 

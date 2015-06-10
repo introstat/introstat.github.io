@@ -107,8 +107,8 @@ body {
     .tootip {
         display: none !important;
     }
-    #last-item {
-        margin-bottom: 95px;
+    body {
+        margin-bottom: 250px;
     }
 }
 

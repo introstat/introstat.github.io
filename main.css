@@ -107,6 +107,9 @@ body {
     .tootip {
         display: none !important;
     }
+    #last-item {
+        margin-bottom: 95px;
+    }
 }
 
 /* tooltips and popovers */

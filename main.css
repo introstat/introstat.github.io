@@ -114,3 +114,12 @@ body {
     white-space: pre;
     max-width: none;
 }
+
+/* slidedown topics list */
+#topicsList {
+    padding-top: 10px;
+}
+
+#topicsList > .well > .row {
+    margin-top: -10px;
+}

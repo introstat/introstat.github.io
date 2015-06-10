@@ -6,7 +6,7 @@ html {
 body {
 	padding-top: 70px;
     /* margin bottom by sticky footer height */
-    margin-bottom:150px;
+    margin-bottom:135px;
 }
 
 .footer {
@@ -26,6 +26,7 @@ body {
 .container {
     width: 85%;
 }
+
 
 /* navigation bar */
 .navbar-default {
@@ -106,9 +107,6 @@ body {
     .tootip {
         display: none !important;
     }
-    body {
-        margin-bottom: 250px;
-    }
 }
 
 /* tooltips and popovers */
@@ -124,4 +122,8 @@ body {
 
 #topicsList > .well > .row {
     margin-top: -10px;
+}
+
+#topicsList > .well > .row a {
+    color: #333;
 }

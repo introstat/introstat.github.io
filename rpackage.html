@@ -2,9 +2,395 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Evan Pete Walsh">
+  <meta name="keywords" content="">
+
+  <!-- font awesome icons and bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <!-- google prettify -->
+  <link rel="stylesheet" href="css/prettify.css">
+  <script src="scripts/prettify.js"></script>
+
+
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- custom styles -->
+  <link href="css/main.css" rel="stylesheet">
+
+
+  <!-- tooltip script -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+  </script>
+
+  <script type="text/javascript">
+  !function ($) {
+        $(function(){
+                window.prettyPrint && prettyPrint()   
+                      })
+          }(window.jQuery)
+  </script>
+
+
+  <title>ePort</title>
 </head>
 <body>
+
+  <!-- navigation bar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://www.iastate.edu/" data-toggle="tooltip" data-placement="bottom" data-original-title="Iowa State University">
+          <img alt="brand" src="images/ISU.png">
+        </a>
+      </div>
+
+      <!-- collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="http://introstat.github.io" data-toggle="tooltip" data-placement="bottom" data-original-title="Home"><i class="fa fa-home"></i></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="outcomes.html">Learning Outcomes List</a></li>
+              <li><a href="vocabwords.html">Vocabulary Word Lists</a></li>
+              <li class="divider"></li>
+              <li><a href="onlinehw.html">Online Homework Questions</a></li>
+              <li><a href="clickerquestions.html">Clicker Questions</a></li>
+              <li><a href="vocabquestions.html">Vocabulary Questions</a></li>
+              <li class="divider"></li>
+              <li class="active"><a href="rpackage.html">Report Software Package</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">People <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="mailto:amyf@iastate.edu"><i class="fa fa-envelope"></i> Amy G. Froelich, PI</a></li>
+              <li><a href="mailto:dicook@iastate.edu"><i class="fa fa-envelope"></i> Dianne Cook, Co-PI</a></li>
+              <li class="divider"></li>
+              <li><a href="#">James Curro</a></li>
+              <li><a href="#">Xiaoyue Cheng</a></li>
+              <li><a href="#">Kathleen Rey</a></li>
+              <li><a href="#">Chelsey Legacy</a></li>
+              <li><a href="#">Lindsay Rutter</a></li>
+              <li><a href="http://epwalsh.com">Evan Pete Walsh</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://github.com/introstat">See this project on GitHub <i class="fa fa-github"></i></a></li>
+              <li><a href="http://www.stat.iastate.edu/">Iowa State Statistics</a></li>
+              <li><a href="http://www.nsf.gov/">National Science Foundation</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+
+  <div class="container">
   
+    <div class="page-header">
+      <h1>ePort | <small>Generate Reports for Intro Stat Students and Instructors</small></h1>
+    </div>
+
+    <div class="media">
+      <div class="media-body">
+        <p class="lead">ePort is an R package to generate electronic reports for the online homeworks and tests. The reports 
+        provide statistical summary and analysis on the scores at different hierarchies. The reports 
+        can be created immediately after every homework deadline during the teaching semester,
+        which asists the instructors in assessing and improving their teaching in a fast 
+        response cycle. This page introduces the usage of the package.</p>
+      </div>
+    </div>
+
+    <p></p>
+
+    <h4>Input</h4>
+
+    <ul>
+      <li>Homework/test data file(s)</li>
+      <li>Answer key</li>
+      <li>Learning objective(s)</li>
+    </ul>
+
+    <p><strong>Homework/test data file(s)</strong> should be downloaded from 
+    <a href="http://www.celt.iastate.edu/technology/blackboard/">Blackboard Learn</a>.
+    The download option must be by question and student, and in the .csv format.</p>
+
+    <p>The <strong>answer key</strong> should be exported as a word document from 
+    <a href="http://www.celt.iastate.edu/technology/other/respondus/">Respondus</a>.
+    Then the document must be saved as an .htm file. This step is to extract and save the images from 
+    the answer key, which will be used later in the reports.</p>
+
+    <p>The <strong>learning adjective(s)</strong> must be prepared in a .txt file with the 
+    format like the example below.</p>
+
+    <code>objectives_example.txt</code>
+
+<pre>
+A. Identify the context of the data by answering the 5 W questions.
+B. Identify the "who" and "what" questions of data based on the structure of the data.
+C. Determine the structure of the data table based on given information.
+D. ...</pre>
+
+    <h4>Generate Report</h4>
+
+    <p>When the input files are ready, we can run the following code to create an 
+    individual homework report of Topic 1, Section AB:</p>
+
+<pre class="prettyprint linenums">
+# Get the path for the answer key 
+key_hml = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Database Questions/Topic01.Questions.htm"
+
+# Generate a clean answer key with paths to the plots in questions 
+refine_key(key_htm)
+
+# Get the path/name of the new answer key 
+key_txt = gsub("htm$", "txt", key_htm)
+
+# Get the path for a data file
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Data Files/Topic01.AB.csv"
+
+# Get the path for the learning objective
+LOpath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Topic Outcomes/Topic01.Outcomes.txt"
+
+# Run a short report
+report_routine(key_txt,datapath,rewrite=FALSE,LOfile=LOpath,
+               knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-individual-short.Rnw",
+               knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+
+# Run a full report
+report_routine(key_txt,datapath,rewrite=FALSE,LOfile=LOpath,
+               knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-individual.Rnw",
+               knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")</pre>
+
+    <p>At this point the .tex files and graphs have been created and are in the 
+    folder <code>"~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst"</code>.
+    Running</p> 
+    <pre>
+pdflatex Stat101hwk_Topic01_AB-short.tex</pre> 
+    <p>and</p>
+    <pre>pdflatex Stat101hwk_Topic01_AB.tex</pre> 
+    <p>will generate the .pdf reports.</p>
+
+    <h4>Notes</h4>
+
+    <ul>
+      <li><code>refine_key(key_htm)</code> is used to clean the html code in the answer key and 
+      create a .txt key. This line only needs to run ONCE.</li>
+      <li>Before running any short or full reports, the data files must be checked - sometimes 
+      the downloaded files have the quote sign problem that stops R from reading the files. If 
+      that problem exists, the following line must be executed to rewrite the data files. 
+      Note that it can only be run ONCE: <code>for (i in namelist) rewrite_data(i)</code></li>
+    </ul>
+  
+    <h4>Generate Reports in Batches for a Topic</h4>
+
+    <p>When there are a few sections for the same course, it is
+inconvenient to change the path for the data files sequentially.
+To save time, we can generate reports in batches as follows.</p>
+
+<pre class="prettyprint linenums">
+# Get a vector of data files
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Data Files"
+namelist = list.files(path=datapath,full.names=TRUE)
+namelist = namelist[grep('Topic01\\.',basename(namelist))]
+
+# Run the short reports in batches (by loop)
+for (i in namelist) 
+  report_routine(key_txt, datafile=i, rewrite=FALSE, LOfile=LOpath,
+                 knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-individual-short.Rnw",
+                 knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+
+# Run the full reports in batches (by loop)
+for (i in namelist) 
+  report_routine(key_txt, datafile=i, rewrite=FALSE, LOfile=LOpath,
+                 knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-individual.Rnw",
+                 knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+
+# Run `pdflatex` for all the .tex files
+</pre>
+    
+    <h4>Report Across Sections for a Topic</h4>
+
+    <p>To compare different sections (or instructors), we can run the
+    report over sections for one topic. The input files <code>key_txt</code>,
+<code>namelist</code>, and <code>LOpath</code> should be the same as above (reports
+in batches for a topic).</p>
+
+<pre class="prettyprint linenums">
+# Run a short report
+report_routine(key_txt, namelist, LOfile=LOpath, 
+               knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-section-short.Rnw",
+               knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+
+# Run the full report
+report_routine(key_txt, namelist, LOfile=LOpath, 
+               knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/hw-section.Rnw",
+               knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+</pre>
+
+    <h4>Merge Reports Across Topics</h4>
+
+    <p>After teaching a unit or module, an instructor may want to
+summarise students' performance over the topics in the unit.
+When the semester is over, it is also important to track
+students' studying pattern for the instructors or course
+coordinator.</p>
+
+<pre class="prettyprint linenums">
+# Merge the desired data files together
+
+# Collect all the data files under the path
+tabfiles = set_dir(datapath)
+
+# If only one unit of data files is required, or some sections
+# are not desired, the following line will take a subset
+tabfiles = tabfiles[tabfiles$section!='201' & tabfiles$topic %in% paste0('Topic0',1:5),]
+
+# Merge the data files, it may take some time
+mgdata = merge_data(tabfiles)
+
+# Run the sectional reports in batches
+for (sctn in unique(tabfiles$section)) {
+  merged = subset_data(mgdata,tabfiles,choice=sctn)
+  knit("Rnw/hw-topic.Rnw",output=paste0('Stat101hwk_Unit1_Section',sctn,'.tex'))
+}
+
+# Run one report for all sections
+merged = subset_data(mgdata,tabfiles)
+knit("Rnw/hw-topic-section.Rnw",output='Stat101hwk_Unit1_allSections.tex')
+</pre>
+
+    <h4>Reports for the Unit Tests</h4>
+
+    <p>This part is quite similar as the procedure for generating
+the homework reports for one topic. Three components of the
+inputs are still needed, and the code to run the reports
+are almost the same.</p>
+
+    <p>The only thing should be awared of is the path for learning
+objectives. Since a unit will cover the materials from multiple
+topics, the corresponding learning objective files should be
+appointed.</p>
+
+<pre class="prettyprint linenums">
+# Set up the input path
+key_htm = "~/Dropbox/NSF Grant 2013-2015/Semesters/Fall 2014/Unit Assessment Questions/Unit1Assessment.htm"
+refine_key(key_htm)
+key_txt = gsub("htm$","txt",key_htm)
+
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Fall 2014/Unit Assessment Data Files"
+topic = gsub('Assessment.txt','',gsub('Unit','',basename(key_txt)))
+namelist = list.files(path=datapath,full.names=TRUE)
+namelist = namelist[grep(paste('Unit',topic,'\\.',sep=''),basename(namelist))]
+
+# choose the corresponding topics
+LOpath = list.files(path="~/Dropbox/NSF Grant 2013-2015/Semesters/Fall 2014/Topic Outcomes",
+                    pattern='\\.txt$',full.names=TRUE)[1:4]
+
+# Run the individual unit reports in batches
+for (i in namelist) 
+  report_routine(key_txt, datafile=i, rewrite=FALSE, LOfile=LOpath, 
+                 knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/unit-individual.Rnw",
+                 knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+
+# Run a report across sections
+report_routine(key_txt, namelist, LOfile=LOpath, 
+               knitfile="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst/Rnw/unit-section.Rnw",
+               knito="~/Dropbox/NSF Grant 2013-2015/Reports/Code/ePort/inst")
+</pre>
+  
+    <h4>Code to Solve Some Common Problems</h4>
+
+    <h5>Merge data files</h5>
+
+<pre class="prettyprint linenums">
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Fall 2014/Data Files/Ch9-Ch11"
+namelist = list.files(path=datapath,full.names=TRUE)
+for (i in namelist) rewrite_data(i) # May not need this rewriting step!
+for(i in c('AB','CD','EF','GH','JK','LM')){
+  tmp = namelist[grep(i,basename(namelist))]
+  combine_files(tmp[2],tmp[1],paste("Topic11",i,"csv",sep='.'))
+}
+</pre>
+
+    <h5>Split data files</h5>
+
+<pre class="prettyprint linenums">
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Data Files/Ch3"
+namelist = list.files(path=datapath,full.names=TRUE)
+for (i in namelist) rewrite_data(i) # May not need this rewriting step!
+for(i in c('AB','CD','EF','GH','JKQ','LM')){
+  tmp = namelist[grep(i,basename(namelist))]
+  split_file(tmp, 29, "ID")
+}
+</pre>
+
+    <h5>De-identify students</h5>
+
+<pre class="prettyprint linenums">
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Fall 2013/Data Files (de-identified)"
+a = getNameList(datapath, section=NULL, semester="13f", secblind=TRUE, save=TRUE)
+encodeName(datapath, dict=paste(datapath,"nameCode.csv",sep='/'))
+</pre>
+
+    <h5>Merge sections</h5>
+
+<pre class="prettyprint linenums">
+key_txt = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Database Questions/Topic05.Questions.txt"
+datapath = "~/Dropbox/NSF Grant 2013-2015/Semesters/Spring 2015/Data Files"
+topic = "05"
+namelist = list.files(path=datapath,full.names=TRUE)
+namelist = namelist[grep(paste('Topic',topic,'\\.',sep=''),basename(namelist))]
+
+answerkey = convertkey(key_txt)
+instructor_scores = merge_section(namelist, answerkey,skip=NULL)
+rownames(instructor_scores$score) = instructor_scores$score$student
+tmp1 = instructor_scores$Qscore
+l = ncol(tmp1)
+tmp1$TotalScore = rowSums(tmp1, na.rm=TRUE)
+tmp1$Section = instructor_scores$score[rownames(tmp1),'Section']
+tmp1 = tmp1[,c(l+2,l+1,1:l)]
+tmp2 = instructor_scores$Qanswer
+tmp2$Section = instructor_scores$score[rownames(tmp2),'Section']
+tmp2 = tmp2[,c(l+1,1:l)]
+write.csv(tmp1,file='Topic3.score.csv')
+write.csv(tmp2,file='Topic3.answer.csv')
+</pre>
+
+  </div><!-- .container -->
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">This material is based upon work supported by the National Science Foundation under Grant No. 12-45504. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.</p>
+      <p class="text-muted">Copyright 2015 Iowa State University | Web design and build by <a href="http://epwalsh.com">Evan P. Walsh</a></p>
+    </div>
+  </footer>
+
+
 </body>
 </html>

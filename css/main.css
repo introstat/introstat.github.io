@@ -138,3 +138,7 @@ pre {
 .prettyprint ol.linenums > li { 
     list-style-type: decimal; 
 }
+
+.table > tr > th {
+    text-align:left;
+}

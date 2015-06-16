@@ -1,10 +1,199 @@
 <!DOCTYPE html>
+<!-- Designed and built by Evan Pete Walsh (epwalsh.com) -->
+<!-- _________  ______ _     _
+         |     /       |     |
+         |     \_____  |     |
+         |           | |     |
+     ____|____ ______/ \_____/  -->
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Evan Pete Walsh">
+    <meta name="keywords" content="">
+
+    <!-- font awesome icons and bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- custom styles -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- tooltip script -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
+
+    <title>Iowa State University</title>
+  </head>
+
+  <body>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.iastate.edu/" data-toggle="tooltip" data-placement="bottom" data-original-title="Iowa State University">
+            <img alt="brand" src="images/ISU.png">
+          </a>
+        </div>
+
+        <!-- collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="http://introstat.github.io" data-toggle="tooltip" data-placement="bottom" data-original-title="Home"><i class="fa fa-home"></i></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Materials <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="active"><a href="outcomes.html">Learning Outcomes List</a></li>
+                <li><a href="vocabwords.html">Vocabulary Word Lists</a></li>
+                <li class="divider"></li>
+                <li><a href="onlinehw.html">Online Homework Questions</a></li>
+                <li><a href="clickerquestions.html">Clicker Questions</a></li>
+                <li><a href="vocabquestions.html">Vocabulary Questions</a></li>
+                <li class="divider"></li>
+                <li><a href="rpackage.html">Report Software Package</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">People <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="mailto:amyf@iastate.edu"><i class="fa fa-envelope"></i> Amy G. Froelich, PI</a></li>
+                  <li><a href="mailto:dicook@iastate.edu"><i class="fa fa-envelope"></i> Dianne Cook, Co-PI</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">James Curro</a></li>
+                  <li><a href="#">Xiaoyue Cheng</a></li>
+                  <li><a href="#">Kathleen Rey</a></li>
+                  <li><a href="#">Chelsey Legacy</a></li>
+                  <li><a href="#">Lindsay Rutter</a></li>
+                  <li><a href="http://epwalsh.com">Evan Pete Walsh</a></li>
+                </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Resources <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://github.com/introstat">See this project on GitHub <i class="fa fa-github"></i></a></li>
+                <li><a href="http://www.stat.iastate.edu/">Iowa State Statistics</a></li>
+                <li><a href="http://www.nsf.gov/">National Science Foundation</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+    
+      <div class="page-header">
+        <h1>Learning Outcomes</h1>
+      </div>
+
+      <div class="media">
+        <div class="media-body">
+          <p class="lead">For each topic, we have written a list of student learning outcomes - statements describing what we want students to know or to be able to do after learning the topic. These learning outcomes form the structure of our electronic assessment model. There are ?? learning outcomes across our 27 topics.</p>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h3>Examples</h3>
+      </div>
+
+      <h4>Topic 06: Normal Distribution</h4>
+      
+
+      <table class="table table-hover">
+        <tr>
+          <th>#</th>
+          <th>Outcome</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Use standardizing to determine how many standard deviations an observation is away from tde mean value.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Use z-scores to compare observations for different quantitative variables.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Explain how standardizing affects tde shape, center, and variability of tde distribution of a quantitative variable.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Determine which quantitative variables could be modeled using tde normal distribution by interpreting graphical representations of tde variable.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Apply tde 68-95-99.7 Rule to any quantitative variable witd a normal distribution.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Find percentile or area values for any given observation from a normal distribution.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Find the value of an observation when given a percentile or area value from tde normal distribution.</td>
+        </tr>
+      </table>
+
+      <h4>Topic 19: Confidence Interval for the Population Mean</h4>
+
+      <table class="table table-hover">
+        <tr>
+          <th>#</th>
+          <th>Outcome</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>This is an outcome for Topic 19</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Find the value of an observation when given a percentile or area value from tde normal distribution.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Outcome 3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Outcome 4</td>
+        </tr>
+      </table>
+    
+    
+    
+    
+    </div><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">This material is based upon work supported by the National Science Foundation under Grant No. 12-45504. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.</p>
+        <p class="text-muted">Copyright 2015 Iowa State University | Web design and build by <a href="http://epwalsh.com">Evan P. Walsh</a></p>
+      </div>
+    </footer>
+
+ 
 </body>
 </html>
+
+

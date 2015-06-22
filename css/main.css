@@ -142,3 +142,15 @@ pre {
 .table > tr > th {
     text-align:left;
 }
+
+.hw-questions {
+    list-style-type: none;
+}
+
+.answers {
+    max-width: 350px;
+}
+
+.words {
+    max-width: 350px;
+}

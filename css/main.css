@@ -154,3 +154,20 @@ pre {
 .words {
     max-width: 350px;
 }
+
+.panel-collapse {
+    padding: 10px;
+}
+
+.panel > a {
+    text-decoration: none;
+}
+
+.panel-heading {
+    background-color: #EEE;
+    color: #333;
+}
+
+.panel-heading:hover {
+    background-color: #DDD;
+}

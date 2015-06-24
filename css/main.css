@@ -110,6 +110,16 @@ body {
     body {
         margin-bottom: 250px;
     }
+    #nsf {
+        display: none;
+    }
+}
+
+/* big version */
+@media (min-width: 768px) {
+    #nsf_mobile {
+        display: none;
+    }
 }
 
 /* tooltips and popovers */
@@ -171,3 +181,4 @@ pre {
 .panel-heading:hover {
     background-color: #DDD;
 }
+

@@ -21,6 +21,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+    <!-- google prettify -->
+    <link rel="stylesheet" href="css/prettify.css">
+    <script src="scripts/prettify.js"></script>
+
     <!-- favicon -->
     <link rel="icon" href="images/favicon.ico">
 
@@ -128,12 +132,12 @@
 
       <p class="lead">Our electronic assessment model divides the material in the introductory statistics course into 27 different topic areas covering content in descriptive statistics, data collection, probability and statistical inference.  Coverage of each topic is self-contained, so instructors can choose only the topics covered in their specific course in any order. Topics are not structured around any textbook, but include a broad range of topics covered in many different general introductory statistics courses.</p>
 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topicsModal">
         Topics List
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="topicsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -262,134 +266,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!--
-      <a class="btn btn-primary" data-toggle="collapse" href="#topicsList" aria-expanded="false" aria-controls="topicsList">
-        Topics List  
-      </a>
-
-      <div id="topicsList" class="collapse">
-        <table class="table table-hover">
-          <tr>
-            <th>#</th>
-            <th>Topic</th>
-          </tr>
-          <tr>
-            <td>01</td>
-            <td>Data</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>Summarizing a Categorical Variable</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>Summarizing a Quantitative Variable</td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td>Summarizing a Contingency Table</td>
-          </tr>
-          <tr>
-            <td>05</td>
-            <td>Summarizing a Quantitative Variable Between Groups</td>
-          </tr>
-          <tr class="info" data-toggle="tooltip" data-placement="bottom" title="Examples available">
-            <td>06</td>
-            <td>Normal Distribution</td>
-          </tr>
-          <tr>
-            <td>07</td>
-            <td>Summarizing Scatterplots</td>
-          </tr>
-          <tr>
-            <td>08</td>
-            <td>Summarizing the Least Squares Regression Line</td>
-          </tr>
-          <tr>
-            <td>09</td>
-            <td>Samples and Surveys</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Experiments</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>Randomness and Probability</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>Introduction to Probability and Events</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>Introduction to Random Variables</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td>Binomial and Poisson Distributions</td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td>Sampling Distribution of the Sample Proportion</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td>Confidence Interval for the Population Proportion</td>
-          </tr>
-          <tr>
-            <td>17</td>
-            <td>Hypothesis Test for the Population Proportion</td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td>Sampling Distribution for the Sample Mean</td>
-          </tr>
-          <tr class="info" data-toggle="tooltip" data-placement="bottom" title="Examples available">
-            <td>19</td>
-            <td>Confidence Interval for the Population Mean</td>
-          </tr>
-          <tr>
-            <td>20</td>
-            <td>Hypothesis Test for the Sample Mean</td>
-          </tr>
-          <tr>
-            <td>21</td>
-            <td>Inference for the Difference in Two Population Proportions</td>
-          </tr>
-          <tr>
-            <td>22</td>
-            <td>Inference for the Difference in Two Population Means</td>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td>Inference for the Mean Difference (Paired Sample)</td>
-          </tr>
-          <tr>
-            <td>24</td>
-            <td>Goodness of Fit Tests</td>
-          </tr>
-          <tr>
-            <td>25</td>
-            <td>Inference for Contingency Tables</td>
-          </tr>
-          <tr>
-            <td>26</td>
-            <td>Inference for Simple Linear Regression</td>
-          </tr>
-          <tr>
-            <td>27</td>
-            <td>Basic Ideas of Statistical Inference</td>
-          </tr>
-        </table>
-
-        <a class="btn btn-primary" data-toggle="collapse" href="#topicsList" aria-expanded="false" aria-controls="topicsList">
-          Hide Topics
-        </a>
-
-        </div>-->
+      </div><!-- topics list modal -->
 
       <div class="page-header">
         <h3>Materials Available</h3>
@@ -433,7 +310,50 @@
 
       <p class="lead">To request a copy of the materials described here, please email <a href="mailto:amyf@iastate.edu">Amy Froelich</a>. 
       When your request is received and it is verified that you will use the materials for educational purposes, you will be given complete 
-      access to everything. If you wish to contribute you may request access to the private GitHub repository.</p>
+      access to everything. If you wish to contribute you may request access to the private GitHub repository. For instructions on how to use GitHub, click 
+      <a href="" data-toggle="modal" data-target="#gitintro">here</a>.</p>
+
+      <div class="modal fade" id="gitintro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel2">Getting started with GitHub <i class="fa fa-github"></i></h4>
+            </div>
+            <div class="modal-body">
+              <p><strong>Step 1:</strong> Visit <a href="https://github.com">github.com</a> then click "Sign up".</p>
+              <p><strong>Step 2:</strong> Create a username and password, then select "Create an account" and choose the free plan.</p>
+              <p><strong>Step 3:</strong> Once your is set up, email us at <a href="mailto:amyf@iastate.edu">amyf@iastate.edu</a> and request access 
+              to the introstat materials repository.</p>
+              <p><strong>Step 4:</strong> If you are comfortable using the command-line, jump to the git command-line instructions below. If not,
+              have no fear. GitHub has an easy-to-use GUI for both Windows and Mac. If you are a Windows user, go to 
+              <a href="https://windows.github.com">windows.github.com</a>. For Mac users, visit <a href="https://mac.github.com">mac.github.com</a>. Then 
+              download and install the application.</p>
+              <p><strong>Step 5:</strong> Open the GitHub application and make sure to set up with your GitHub username and password before doing anything else.</p>
+              <p><strong>Step 6:</strong> In the upper left corner of the UI, click the "+" icon and then click on the clone tab. Once you have been given access 
+              to the materials repository, you should see a repository in the list called materials under the introstat organization. We will notify you 
+              when this will become available. You should also receive an email from GitHub at that time.</p>
+              <p><strong>Step 7:</strong> Click on the materials repository and choose a location on your computer where you would like to keep the files, 
+              then click "Clone".</p>
+              <p><strong>Step 8:</strong> Enjoy! For more reading on how to use GitHub see 
+              <a href="https://help.github.com/categories/bootcamp">GitHub bootcamp</a>.</p>
+              <hr>
+              <h5>Command-line instructions</h5>
+              <p><strong>Step 1:</strong> Visit <a href="http://git-scm.com/downloads">git-scm.com/downloads</a> and download the appropriate version 
+              for your operating system.</p>
+              <p><strong>Step 2:</strong> Set up Git using the instructions on this <a href="https://help.github.com/articles/set-up-git/#platform-mac">page</a>.</p>
+              <p><strong>Step 3:</strong> Once you have received a notification from us that you have been given access to the materials, 
+              <code class="prettyprint">cd</code> to the directory where you would to keep the files.</p>
+              <p><strong>Step 4:</strong> Enter <code class="prettyprint">git clone git@github.com:introstat/materials.git</code>.</p>
+              <p><strong>Step 5:</strong> Enjoy! For more information about how to use Git from the command-line, a good starting point would 
+              be <a href="https://git-scm.com/docs/gittutorial">git-scm.com/docs/gittutorial</a>.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="page-header">
         <h3>People</h3>

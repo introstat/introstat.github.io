@@ -34,7 +34,7 @@
       });
     </script>
 
-    <title>Iowa State University</title>
+    <title>Electonic Assessment Materials for Intro Stat</title>
   </head>
 
   <body>
@@ -109,7 +109,7 @@
 
       <div class="media">
         <div class="media-body">
-          <p class="lead">To assess student understanding of our vocabulary words, we wrote short vocabulary quizzes for each topic, ranging from 3 to 13 questions each. The database includes a total of 195 questions with multiple choice, true/false, matching, and word bank question formats. The question database is currently available in two formats: MS Word and Respondus archives for upload to the CMS Blackboard. </p>
+          <p class="lead">To assess student understanding of our vocabulary words, we wrote short vocabulary quizzes for each topic, ranging from 3 to 13 questions each. The database includes a total of 195 questions with multiple choice, true/false, matching, multiple answer, fill in the blank, and drop down list question formats. Questions are identified by topic, question type, and number. The question database is currently available in two formats: MS Word and Respondus archives for upload to the CMS Blackboard. Student responses can be downloaded from Blackboard and the <a href = "introstat.github.io/rpackage.html">ePort package</a> used to summarize overall performance on each topic and each question within the topic. Some example questions are given below for Topics 06 and 19. </p>
         </div>
       </div>
 
@@ -118,54 +118,96 @@
       </div>
 
       <h4>Topic 06: Normal Distribution</h4>
-
-      <p>Match the words to the appropriate description.</p>
+        
+ <table class="table table-hover">
+     
+      <tr> <td> <strong> Matching:</strong> <br> Match the words on the left to the appropriate description on the right. <br> <br>
 
       <table class="table table-hover">
+        
         <tr>
-          <th>Word</th>
-          <th>Description</th>
+          <td><select> <option selected> -- </option> <option> a. </option> <option> b. </option> <option> c. </option></select><strong> 1. </strong> Shifting          </td>
+          <td>[a] The process of dividing all the values of a quantitative variable by a constant.</td>
         </tr>
         <tr>
-          <td class="info"><strong>a. </strong> Shifting</td>
-          <td class="danger">[b] The process of dividing all the values of a variable by a constant.</td>
+          <td><select> <option selected> -- </option> <option> a. </option> <option> b. </option> <option> c. </option></select><strong> 2. </strong> Rescaling         </td>
+          <td>[b] The process of determining the number of standard deviations every value of a quantitative variable is away from its mean value. </td>
         </tr>
         <tr>
-          <td class="danger"><strong>b. </strong> Rescaling</td>
-          <td class="warning">[c] The purpose of this is to be able to compare two quantitative 
-          variables on different scales.</td>
-        </tr>
-        <tr>
-          <td class="warning"><strong>c. </strong> Standardizing</td>
-          <td class="info">[a] The process of adding or subtracting a constant from every 
-          value in a variable.</td>
+          <td><select> <option selected> -- </option> <option> a. </option> <option> b. </option> <option> c. </option></select> <strong> 3. </strong> Standardizing    </td>
+          <td>[c] The process of adding or subtracting a constant from every value of a quantitative a variable.</td>
         </tr>
       </table>
-
+    </td>
+     </tr>
+     
+     <tr> <td> <strong> Drop Down List:</strong> <br> Choose the appropriate word or phrase from the drop down menu to complete the sentences: <br> <br>
+         
+     <table>
+         
+        <tr> <td> A z-score is found by subtracting the <select> <option selected>-- </option> <option> mean </option> <option>standard deviation </option> <option> units </option> <option> median </option> <option> IQR </option> <option> variance </option><option> range </option></select> value from the observation and then dividing by the <select> <option selected> -- </option> <option> mean </option> <option>standard deviation </option> <option> units </option> <option> median </option> <option> IQR </option> <option> variance </option><option> range </option></select>. <br> <br> </td> </tr>
+            
+        <tr> <td> A z-score is just a number - it has no <select> <option selected> -- </option> <option> mean </option> <option>standard deviation </option> <option> units </option> <option> median </option> <option> IQR </option> <option> variance </option><option> range </option></select>. </td> </tr>
+         </table>
+         </td>
+     </tr>
+        
+     <tr> <td> <br> <strong> Fill in the Blank:</strong> <br> The <input type="text" size="20"> normal distribution has a mean of 0 and a standard deviation of 1. <br> <br> </td></tr>
+     
+     <tr> <td> <strong> Multiple Choice:</strong> <br> A Normal probability/quantile plot is used to see if the distribution of a quantitative variable follows a __________ distribution. <br> <br>
+     
+         <table class="table table hover answers">
+             <tr> <td> <input type="radio" name="group1"> <strong>a.</strong> numeric </td> </tr>
+             <tr> <td> <input type="radio" name="group1"> <strong>b.</strong> scaled </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>c.</strong> normal </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>d.</strong> shifted </td></tr> 
+         </table>
+             </td> </tr>
+             
+         </table>
+     
+        
       <h4>Topic 19: Confidence Interval for the Population Mean</h4>
+        
+        <table class="table table-hover">
+            
+            <tr> <td> <strong> Multiple Answer:</strong> <br> Select all attributes of the t-distribution. <br> <br>
+                
+        <table class="table table hover answers">
+             <tr> <td> <input type="checkbox" name="option1"> <strong>a.</strong> Bell-Shaped </td> </tr>
+             <tr> <td> <input type="checkbox" name="option2"> <strong>b.</strong> Skewed Right </td></tr> 
+             <tr> <td> <input type="checkbox" name="option3"> <strong>c.</strong> Skewed Left </td></tr> 
+             <tr> <td> <input type="checkbox" name="option4"> <strong>d.</strong> Unimodal </td></tr> 
+             <tr> <td> <input type="checkbox" name="option5"> <strong>e.</strong> Bimodal </td></tr> 
+             <tr> <td> <input type="checkbox" name="option6"> <strong>f.</strong> Symmetric </td></tr> 
+         </table>
+             </td> </tr>
+        
+        <tr> <td> <strong> Multiple Choice:</strong> <br> The parameter for a t distribution is the _____________. <br> <br>
 
-      <p>Which conditions must be satisfied in order to use the t distribution?</p>
+          <table class="table table hover answers">
+             <tr> <td> <input type="radio" name="group1"> <strong>a.</strong> mean </td> </tr>
+             <tr> <td> <input type="radio" name="group1"> <strong>b.</strong> proportion </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>c.</strong> standard deviation </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>d.</strong> degrees of freedom </td></tr> 
+         </table>
+             </td> </tr>
 
-      <table class="table table-hover answers">
-        <tr>
-          <td class="success"><strong>a. </strong> Randomization condition</td>
-        </tr>
-        <tr>
-          <td><strong>b. </strong> Equal variance assumption</td>
-        </tr>
-        <tr>
-          <td class="success"><strong>c. </strong> 10% condition</td>
-        </tr>
-        <tr>
-          <td><strong>d. </strong> Success/Failure condition</td>
-        </tr>
-        <tr>
-          <td class="success"><strong>e. </strong> Nearly normal condition</td>
-        </tr>
-        <tr>
-          <td><strong>f. </strong> There are no conditions needed</td>
-        </tr>
-      </table>
+        <tr> <td> <strong> Multiple Choice:</strong> <br> Half of the width of the confidence interval is called the __________. <br> <br>
+            
+            <table class="table table hover answers">
+             <tr> <td> <input type="radio" name="group1"> <strong>a.</strong> t* critical value </td> </tr>
+             <tr> <td> <input type="radio" name="group1"> <strong>b.</strong> standard error </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>c.</strong> margin of error </td></tr> 
+             <tr> <td> <input type="radio" name="group1"> <strong>d.</strong> confidence level </td></tr> 
+         </table>
+             </td> </tr>
+            
+        </table>
+
+
+
+      
 
 
     </div><!-- /.container -->
